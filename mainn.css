@@ -1,0 +1,286 @@
+/* light blue #2b98f0 */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f5f5f5;
+}
+
+
+/* Header Styling */
+#header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+#nav-top {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 10px;
+}
+
+#nav-top h3 {
+    font-size: 30px;
+    padding: 5px;
+    color: #2b98f0;
+    border: 3px solid;
+    transition: color 1s ease, background 1s ease;
+}
+
+#nav-top h3:hover {
+    background: #2b98f0;
+    color: #f5f5f5;
+}
+
+#menu-btn {
+    padding: 5px;
+    border: 2px solid #2b98f0;
+    cursor: pointer;
+    align-self: center;
+}
+
+.bar1, .bar2, .bar3 {
+    height: 5px;
+    width: 35px;
+    background: #2b98f0;
+    margin: 5px 0;
+    transition: transform 1s ease;
+}
+
+/* This code are for creating a cross sign in our button-like div  */
+.turn .bar1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.turn .bar2 {
+    opacity: 0;
+}
+
+.turn .bar3 {
+    transform: rotate(45deg) translate(-7px, -8px);
+}
+/* The code ends here */
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li a {
+    display: block;
+    color: #2b98f0;
+    background: transparent;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    transition: color 1s ease, background 1s ease, padding 1s ease; 
+}
+
+nav ul li a:hover {
+    color: #f5f5f5;
+    padding-left: 60px;
+    background: #2b98f0;
+}
+
+#banner {
+    flex: 1 0 auto;
+}
+
+
+@media screen and (min-width: 690px) {
+    nav {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    
+    #nav-top {
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex: 1 1 auto;
+        display: flex!important;
+        flex-wrap: wrap;
+    }
+    
+    nav ul li {
+        flex: 1 0 125px;
+    }
+    
+    nav ul .icon {
+        flex: 0 0 20px;
+    }
+    
+    nav ul li .link-icon {
+        color: #f5f5f5;
+        background: #395e7e;
+        height: auto;
+    }
+    
+    nav ul li .link-icon:hover {
+        background: #008dff;
+    }
+    
+    nav ul a {
+        text-align: center;
+    }
+    
+    nav ul a:hover {
+        padding: 10px!important;
+    }
+    
+    #menu-btn {
+        display: none;
+    }
+    
+    
+}
+
+
+/* Banner Styling Begins Here */
+#banner {
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)) ,url(img/hero-image.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#banner-box {
+    color: #f5f5f5;
+    text-align: center;
+}
+
+#banner-title {
+    text-transform: capitalize;
+    font-size: 60px;
+}
+
+#banner-underline {
+    width: 200px;
+    margin: 10px auto;
+    border: 3px solid #2b98f0;
+}
+
+.banner-subtitle {
+    margin: 20px 0 40px 0px;
+    text-transform: capitalize;
+    font-size: 25px;
+}
+
+#banner-box a {
+    display: inline-block;
+    padding: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #f5f5f5;
+    border: 3px solid #f5f5f5;
+    background: transparent;
+    transition: background 3s ease, border 0.5s ease;
+}
+
+#banner-box a:hover {
+    background: #2b98f0;
+    border: 3px solid #2b98f0;
+}
+
+/* Title-Text Styling Begins Here */
+.title {
+    margin: 10px 0 40px;
+    cursor: pointer;
+}
+
+.title-text {
+    font-size: 50px;
+    text-transform: capitalize;
+    color: #575757;
+}
+
+.title-underline {
+    width: 50px;
+    border: 3px solid #2b98f0;
+    transition: width 4s ease, border 4s ease;
+}
+
+.title:hover .title-underline {
+    width: 200px;
+    border: 3px solid red;
+}
+
+/*  Skills Section Styling Begins Here */
+#skills {
+    padding: 40px;
+}
+
+.skill {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.skill .fas {
+    color: #2b98f0;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 60px;
+    transition: transform 0.5s ease-in, background 0.5s ease, color 0.5s ase;
+}
+
+.skill .fas:hover {
+    transform: scale(1.2);
+    background: #2b98f0;
+    color: #f5f5f5;
+}
+
+.skill h3 {
+    margin: 10px 0 15px;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #2b98f0;
+}
+
+.skill p {
+    line-height: 1.5em;
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+
+/* Responsiveness on a minimum of 576px - this affects both the skills-center and the skill classes of the skills section, withiut touching the class="title" */
+/* We would like to use CSS Grid to style the Skill Section */
+@media screen and (min-width: 576px) {
+    .skills-center {
+        max-width: 90vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+    }
+    
+    
+}
+
+/* Responsiveness on a minimum of 776px - this affects only the class of skill section */
+@media screen and (min-width: 992px) {    
+     .skills-center {
+        max-width: 90vw;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 20px;
+    }
+}
+
